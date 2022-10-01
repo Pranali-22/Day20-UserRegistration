@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Dell
- * As a User need to follow pre-defined Mobile Format - E.g. 91 9919819801 - Country code follow by space
+ * As a User need to follow pre-defined Password rules.
+ * Rule2 - Should have at least 1 Upper Case - NOTE – All rules must be
  *
  */
 class UserRegistrationTest {
@@ -90,7 +91,7 @@ class UserRegistrationTest {
 
 	/**
 	 * Test method for validatePassword
-	 * validate Password
+	 * validate Password - to check for 1 upper case letter
 	 */
 	@Test
 	void validate_given_password() {
