@@ -88,4 +88,20 @@ class UserRegistrationTest {
 	}
 	
 
+	/**
+	 * Test method for validatePassword
+	 * validate Password
+	 */
+	@Test
+	void validate_given_password() {
+		
+		System.out.println("Enter password");
+		String password=input.nextLine();
+		
+		if(userRegistration.validatePassword(password)) {
+			System.out.println("Password is valid");
+		}else {
+			System.out.println("Password is not valid");
+		}
+	}
 }

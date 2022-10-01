@@ -5,7 +5,8 @@ package com.bridgelabz;
 
 /**
  * @author Dell
- * As a User need to follow pre-defined Mobile Format - E.g. 91 9919819801 - Country code follow by space
+ * As a User need to follow pre-defined Password rules.
+ * Rule1 – minimum 8 Characters - NOTE – All rules must
  */
 public class UserRegistration {
 	
@@ -33,4 +34,9 @@ public class UserRegistration {
 		return mobileNumber.matches(nameRegex);
 	}
 
+	//Validate password
+	public boolean validatePassword(String password) {
+		String nameRegex = "[a-zA-Z0-9!@#$&*]{8,}$";
+		return password.matches(nameRegex);
+	}
 }
