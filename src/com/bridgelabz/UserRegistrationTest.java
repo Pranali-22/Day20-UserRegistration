@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Dell
- * As a User need to enter a valid last Name
+ * As a User need to enter a valid email 
  *
  */
 class UserRegistrationTest {
@@ -48,6 +48,24 @@ class UserRegistrationTest {
 			System.out.println("Last name is valid");
 		}else {
 			System.out.println("Last name is not valid");
+		}
+	}
+	
+	
+	/**
+	 * Test method for validateEmailAddress
+	 * validate last name 
+	 */
+	@Test
+	void validate_given_email_address() {
+		
+		System.out.println("Enter email address");
+		String emailId=input.nextLine();
+		
+		if(userRegistration.validateEmailAddress(emailId)) {
+			System.out.println("Email address is valid");
+		}else {
+			System.out.println("Email address is not valid");
 		}
 	}
 
