@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Dell
- * As a User need to enter a valid email 
+ * As a User need to follow pre-defined Mobile Format - E.g. 91 9919819801 - Country code follow by space
  *
  */
 class UserRegistrationTest {
@@ -68,5 +68,24 @@ class UserRegistrationTest {
 			System.out.println("Email address is not valid");
 		}
 	}
+	
+	
+	/**
+	 * Test method for validateMobileNumber
+	 * validate Mobile Number
+	 */
+	@Test
+	void validate_given_mobile_number() {
+		
+		System.out.println("Enter Mobile number");
+		String mobileNumber=input.nextLine();
+		
+		if(userRegistration.validateMobileNumber(mobileNumber)) {
+			System.out.println("Mobile number is valid");
+		}else {
+			System.out.println("Mobile number is not valid");
+		}
+	}
+	
 
 }
