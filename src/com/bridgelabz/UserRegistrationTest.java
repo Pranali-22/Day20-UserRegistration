@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * @author Dell
  * As a User need to follow pre-defined Password rules.
- * Rule3 – Should have at least 1 number in the password 
+ *  Rule4 – Has exactly 1 Special Character
  *
  */
 class UserRegistrationTest {
@@ -89,7 +89,7 @@ class UserRegistrationTest {
 
 	/**
 	 * Test method for validatePassword
-	 * validate Password - to check for least 1 number
+	 * validate Password - to check for exact one special character
 	 */
 	@Test
 	void validate_given_password() {

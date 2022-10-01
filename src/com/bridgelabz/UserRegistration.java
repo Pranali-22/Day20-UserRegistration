@@ -6,7 +6,7 @@ package com.bridgelabz;
 /**
  * @author Dell
  * As a User need to follow pre-defined Password rules.
- * Rule3 – Should have at least 1 number in the password 
+ * Rule4 – Has exactly 1 Special Character
  */
 public class UserRegistration {
 	
@@ -34,9 +34,9 @@ public class UserRegistration {
 		return mobileNumber.matches(nameRegex);
 	}
 
-	//Validate password to have at least 1 numeric number
+	//Validate password to have exact 1 special character
 	public boolean validatePassword(String password) {
-		String nameRegex = "[A-Z]{1,}[a-zA-Z0-9!@#$&*]{6,}[0-9]{1,}$";
+		String nameRegex = "[A-Z]{1,}[a-zA-Z0-9]{5,}[!@#$&*]{1}[0-9]{1,}$";
 		return password.matches(nameRegex);
 	}
 }
