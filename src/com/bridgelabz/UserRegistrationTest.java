@@ -4,7 +4,7 @@
 package com.bridgelabz;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -27,11 +27,7 @@ class UserRegistrationTest {
 		System.out.println("Enter first name");
 		String firstName=input.nextLine();
 		
-		if(userRegistration.validateFirstName(firstName)) {
-			System.out.println("First name is valid");
-		}else {
-			System.out.println("First name is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateFirstName(firstName));
 	}
 	
 	/**
@@ -44,17 +40,13 @@ class UserRegistrationTest {
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
-		if(userRegistration.validateLastName(lastName)) {
-			System.out.println("Last name is valid");
-		}else {
-			System.out.println("Last name is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateLastName(lastName));
 	}
 	
 	
 	/**
 	 * Test method for validateEmailAddress
-	 * validate last name 
+	 * validate email address 
 	 */
 	@Test
 	void validate_given_email_address() {
@@ -62,11 +54,7 @@ class UserRegistrationTest {
 		System.out.println("Enter email address");
 		String emailId=input.nextLine();
 		
-		if(userRegistration.validateEmailAddress(emailId)) {
-			System.out.println("Email address is valid");
-		}else {
-			System.out.println("Email address is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateFirstName(emailId));
 	}
 
 }
