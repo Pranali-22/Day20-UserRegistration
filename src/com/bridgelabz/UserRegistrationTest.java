@@ -5,6 +5,7 @@ package com.bridgelabz;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -27,24 +28,22 @@ class UserRegistrationTest {
 		System.out.println("Enter first name");
 		String firstName=input.nextLine();
 		
-		if(userRegistration.validateFirstName(firstName)) {
-			System.out.println("First name is valid");
-		}else {
-			System.out.println("First name is not valid");
-		}
+		Assert.assertTrue(firstName,userRegistration.validateFirstName(firstName));
+		
 	}
 	
 	/**
 	 * Test method for validateLastName
 	 * validate last name 
 	 */
+	
 	@Test
 	void validate_given_last_name() {
 		
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
-		userRegistration.validateLastName(lastName);
+		Assert.assertTrue(lastName,userRegistration.validateFirstName(lastName));
 	}
 
 }
