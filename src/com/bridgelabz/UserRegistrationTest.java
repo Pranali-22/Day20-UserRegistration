@@ -27,11 +27,7 @@ class UserRegistrationTest {
 		System.out.println("Enter first name");
 		String firstName=input.nextLine();
 		
-		if(userRegistration.validateFirstName(firstName)) {
-			System.out.println("First name is valid");
-		}else {
-			System.out.println("First name is not valid");
-		}
+		userRegistration.validateFirstName(firstName);
 	}
 
 }
