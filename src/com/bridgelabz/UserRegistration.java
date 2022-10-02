@@ -6,6 +6,7 @@ package com.bridgelabz;
 /**
  * @author Dell
  * As a User need to enter a valid last Name
+ * 
  */
 public class UserRegistration {
 	

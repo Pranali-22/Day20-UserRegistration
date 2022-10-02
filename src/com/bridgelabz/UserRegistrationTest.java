@@ -44,11 +44,7 @@ class UserRegistrationTest {
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
-		if(userRegistration.validateLastName(lastName)) {
-			System.out.println("Last name is valid");
-		}else {
-			System.out.println("Last name is not valid");
-		}
+		userRegistration.validateLastName(lastName);
 	}
 
 }
