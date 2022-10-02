@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import org.junit.*;
+
 /**
  * @author Dell
  * As a User need to enter a valid First Name
@@ -27,7 +29,7 @@ class UserRegistrationTest {
 		System.out.println("Enter first name");
 		String firstName=input.nextLine();
 		
-		userRegistration.validateFirstName(firstName);
+		Assert.assertTrue(firstName, userRegistration.validateFirstName(firstName));
 	}
 
 }
