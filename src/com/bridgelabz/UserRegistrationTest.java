@@ -3,8 +3,7 @@
  */
 package com.bridgelabz;
 import java.util.*;
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -27,11 +26,7 @@ class UserRegistrationTest {
 		System.out.println("Enter first name");
 		String firstName=input.nextLine();
 		
-		if(userRegistration.validateFirstName(firstName)) {
-			System.out.println("First name is valid");
-		}else {
-			System.out.println("First name is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateFirstName(firstName));
 	}
 	
 	/**
@@ -44,11 +39,7 @@ class UserRegistrationTest {
 		System.out.println("Enter last name");
 		String lastName=input.nextLine();
 		
-		if(userRegistration.validateLastName(lastName)) {
-			System.out.println("Last name is valid");
-		}else {
-			System.out.println("Last name is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateLastName(lastName));
 	}
 	
 	
@@ -62,11 +53,7 @@ class UserRegistrationTest {
 		System.out.println("Enter email address");
 		String emailId=input.nextLine();
 		
-		if(userRegistration.validateEmailAddress(emailId)) {
-			System.out.println("Email address is valid");
-		}else {
-			System.out.println("Email address is not valid");
-		}
+		Assert.assertTrue(userRegistration.validateEmailAddress(emailId));
 	}
 	
 	
@@ -78,13 +65,8 @@ class UserRegistrationTest {
 	void validate_given_mobile_number() {
 		
 		System.out.println("Enter Mobile number");
-		String mobileNumber=input.nextLine();
-		
-		if(userRegistration.validateMobileNumber(mobileNumber)) {
-			System.out.println("Mobile number is valid");
-		}else {
-			System.out.println("Mobile number is not valid");
-		}
+		String mobileNumber=input.nextLine();		
+		Assert.assertTrue(userRegistration.validateMobileNumber(mobileNumber));
 	}
 	
 
