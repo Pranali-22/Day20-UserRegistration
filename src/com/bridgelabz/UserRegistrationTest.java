@@ -54,7 +54,7 @@ class UserRegistrationTest {
 		System.out.println("Enter email address");
 		String emailId=input.nextLine();
 		
-		Assert.assertTrue(userRegistration.validateFirstName(emailId));
+		Assert.assertTrue(userRegistration.validateEmailAddress(emailId));
 	}
 
 }
