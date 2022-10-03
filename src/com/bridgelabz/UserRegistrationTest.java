@@ -70,7 +70,7 @@ class UserRegistrationTest {
 	
 	/**
 	 * Test method for validatePassword
-	 * validate Password - to have 1 letter in uppercase
+	 * validate Password - at least 1 numeric number
 	 */
 	@Test
 	void validate_given_password() {
