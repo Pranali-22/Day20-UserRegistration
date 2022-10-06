@@ -46,13 +46,13 @@ class UserRegistrationTest {
 	 * Test method for validateEmailAddress
 	 * validate email address 
 	 */	
+	ArrayList<String> emailList = new ArrayList<String>(Arrays.asList("abc@yahoo.com","abc-100@yahoo.com","abc111@abc.com","abc@1.com","abc","abc@.com.my","abc123@gmail.a","abc123@.com.com","abc@%*.com"));
+
 	@Test
-	void validate_given_email_address() {
-			
-		String[] emailList = {"abc@yahoo.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@.com.my","abc","abc()*@gmail.com","abc123@gmail.a"};
-		for(int i=0; i< emailList.length; i++) {	
-			Assert.assertTrue(userRegistration.validateEmailAddress(emailList[i]));
-		}
+	void validate_given_email_address() {			
+			for(String emailId : emailList) {
+				Assert.assertTrue(userRegistration.validateEmailAddress(emailId));
+			}
 	}
 	
 	

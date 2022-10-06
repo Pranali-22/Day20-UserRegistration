@@ -30,7 +30,7 @@ public class UserRegistration {
 				
 	//Validate email address
 	public boolean validateEmailAddress(String emailId) {
-		String newRegex = "[a-z-+-.]@[a-z0-9].[a-z](.[a-z]{2,})?$";
+		String newRegex = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$";
 		Pattern patternObj = Pattern.compile(newRegex);			 
 		Matcher matcherObj = patternObj.matcher(emailId);
 		return matcherObj.matches();	 
